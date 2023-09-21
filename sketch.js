@@ -7,18 +7,17 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  fill(255, 255, 255);
-  circle(x, y, w);
-  x = x + 10;
-  y = y + 10;
-  if (x > width) {
-    x = 0;
-  }
-  if (y > height) {
-    y = y - 10;
-  }
-  if (y < 0) {
-    y = y + 10;
+  
+  background(0);
+  stroke(255);
+  fill(255);
+  //strokeWeight(4);
+  textAlign(CENTER, CENTER);
+  textSize(32);
+  text("Press 'Space' to change background color", width/2, height/2);
+  if (keyIsPressed) {
+    if (key == " ") {
+      background(random(255), random(255), random(255));
+    }
   }
 }
